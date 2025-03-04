@@ -1,0 +1,198 @@
+<!-- Давайте создадим слайдер для четырех слайдов с использованием префикса "training" для классов и идентификаторов. Вот -->
+<!-- оптимизированный код для вашего слайдера: -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Training Slider</title>
+  <style>
+    /* Общие стили */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    /* Стили слайдера */
+    .training_slider-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      overflow: hidden;
+    }
+
+    .training_slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 400%;
+      /* Для четырех слайдов */
+    }
+
+    .training_slide {
+      flex: 0 0 25%;
+      /* Каждый слайд занимает 1/4 ширины */
+      padding: 20px;
+    }
+
+    .training_content_box {
+      display: flex;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .training_content_right {
+      flex: 1;
+    }
+
+    .training_content_right_box {
+      position: relative;
+    }
+
+    .training_right_img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .training_right_btn {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .training_content_left {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .training_title_h4 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .training_text_description {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .training_slider-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .training_nav-button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 5px;
+    }
+
+    .training_nav-button:hover {
+      background-color: #45a049;
+    }
+
+    .training_nav-button:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+
+    .training_slide-indicator {
+      margin: 0 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="trainingSlider" class="training_slider-container">
+    <div class="training_slider">
+      <!-- Слайд 1 -->
+      <div class="training_slide">
+        <div class="training_content_box">
+          <div class="training_content_right">
+            <div class="training_content_right_box">
+              <img class="training_right_img" src="./images/training/img1.jpg" alt="video">
+              <button class="training_right_btn" type="button">Смотреть видео</button>
+            </div>
+          </div>
+          <div class="training_content_left">
+            <div class="training_left_text_container" id="trainingTextContainer1">
+              <h4 class="training_title_h4" id="trainingTextHeading1">Знакомитесь с платформой</h4>
+              <p class="training_text_description" id="trainingTextDescription1">Lorem ipsum dolor sit amet consectetur.
+                Felis amet consectetur sollicitudin at aliquam tincidunt laoreet auctor elit.</p>
+              <div class="training_slider-nav">
+                <button class="training_nav-button prev" onclick="changeTrainingSlide(-1)">❮</button>
+                <span class="training_slide-indicator">1/4</span>
+                <button class="training_nav-button next" onclick="changeTrainingSlide(1)">❯</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Слайд 2 -->
+      <div class="training_slide">
+        <!-- Повторите структуру первого слайда, изменив содержимое и ID -->
+      </div>
+
+      <!-- Слайд 3 -->
+      <div class="training_slide">
+        <!-- Повторите структуру первого слайда, изменив содержимое и ID -->
+      </div>
+
+      <!-- Слайд 4 -->
+      <div class="training_slide">
+        <!-- Повторите структуру первого слайда, изменив содержимое и ID -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentTrainingSlide = 0;
+    const trainingSlider = document.getElementById('trainingSlider');
+    const trainingSlides = trainingSlider.querySelectorAll('.training_slide');
+    const totalTrainingSlides = trainingSlides.length;
+
+    function updateTrainingNavButtons() {
+      const prevButtons = trainingSlider.querySelectorAll('.training_nav-button.prev');
+      const nextButtons = trainingSlider.querySelectorAll('.training_nav-button.next');
+      const indicators = trainingSlider.querySelectorAll('.training_slide-indicator');
+
+      prevButtons.forEach(btn => btn.disabled = currentTrainingSlide === 0);
+      nextButtons.forEach(btn => btn.disabled = currentTrainingSlide === totalTrainingSlides - 1);
+      indicators.forEach((indicator, index) => {
+        indicator.textContent = `${currentTrainingSlide + 1}/${totalTrainingSlides}`;
+      });
+    }
+
+    function changeTrainingSlide(direction) {
+      currentTrainingSlide += direction;
+      if (currentTrainingSlide < 0) currentTrainingSlide = 0;
+      if (currentTrainingSlide >= totalTrainingSlides) currentTrainingSlide = totalTrainingSlides - 1;
+      trainingSlider.querySelector('.training_slider').style.transform = `translateX(-${currentTrainingSlide * 25}%)`;
+      updateTrainingNavButtons();
+    }
+
+    updateTrainingNavButtons();
+  </script>
+</body>
+
+</html>
