@@ -1,41 +1,57 @@
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
+let currentSpeakersSlide = 0;
+const speakersSlider = document.getElementById('speakersSlider');
+const speakersSlides = speakersSlider.querySelectorAll('.speakers_slide');
+const totalSpeakersSlides = speakersSlides.length;
 
-function updateNavButtons() {
-  const prevButtons = document.querySelectorAll('.nav-button.prev');
-  const nextButtons = document.querySelectorAll('.nav-button.next');
-  const indicators = document.querySelectorAll('.slide-indicator');
+function updateSpeakersNavButtons() {
+  const prevButtons = speakersSlider.querySelectorAll(
+    '.speakers_nav-button.prev'
+  );
+  const nextButtons = speakersSlider.querySelectorAll(
+    '.speakers_nav-button.next'
+  );
+  const indicators = speakersSlider.querySelectorAll(
+    '.speakers_slide-indicator'
+  );
 
-  prevButtons.forEach(btn => (btn.disabled = currentSlide === 0));
-  nextButtons.forEach(btn => (btn.disabled = currentSlide === totalSlides - 1));
+  prevButtons.forEach(btn => (btn.disabled = currentSpeakersSlide === 0));
+  nextButtons.forEach(
+    btn => (btn.disabled = currentSpeakersSlide === totalSpeakersSlides - 1)
+  );
   indicators.forEach((indicator, index) => {
-    indicator.textContent = `${index + 1}/${totalSlides}`;
+    indicator.textContent = `${
+      currentSpeakersSlide + 1
+    }/${totalSpeakersSlides}`;
   });
 }
 
-function changeSlide(direction) {
-  currentSlide += direction;
-  if (currentSlide < 0) currentSlide = 0;
-  if (currentSlide >= totalSlides) currentSlide = totalSlides - 1;
-  document.querySelector('.slider').style.transform = `translateX(-${
-    currentSlide * 100
-  }%)`;
-  updateNavButtons();
+function changeSpeakersSlide(direction) {
+  currentSpeakersSlide += direction;
+  if (currentSpeakersSlide < 0) currentSpeakersSlide = 0;
+  if (currentSpeakersSlide >= totalSpeakersSlides)
+    currentSpeakersSlide = totalSpeakersSlides - 1;
+  speakersSlider.querySelector(
+    '.speakers_slider'
+  ).style.transform = `translateX(-${currentSpeakersSlide * 33.333}%)`;
+  updateSpeakersNavButtons();
 }
 
-function changeText(slideIndex, buttonIndex) {
-  const container = document.getElementById(`textContainer${slideIndex}`);
-  const heading = document.getElementById(`speakers_textHeading${slideIndex}`);
-  const description = document.getElementById(
+function changeSpeakersText(slideIndex, buttonIndex) {
+  const containerSpeakers = document.getElementById(
+    `textSpeakersContainer${slideIndex}`
+  );
+  const headingSpeakers = document.getElementById(
+    `speakers_textHeading${slideIndex}`
+  );
+  const descriptionSpeakers = document.getElementById(
     `speakers_textDescription${slideIndex}`
   );
-  const buttons = container.parentElement.querySelectorAll(
+  const buttonsSpeakers = containerSpeakers.parentElement.querySelectorAll(
     '.speakers_buttons_btn'
   );
 
-  buttons.forEach(btn => btn.classList.remove('active'));
-  buttons[buttonIndex - 1].classList.add('active');
+  buttonsSpeakers.forEach(btn => btn.classList.remove('active'));
+  buttonsSpeakers[buttonIndex - 1].classList.add('active');
 
   const content = {
     1: {
@@ -118,8 +134,8 @@ function changeText(slideIndex, buttonIndex) {
     },
   };
 
-  heading.textContent = content[slideIndex][buttonIndex].title;
-  description.textContent = content[slideIndex][buttonIndex].desc;
+  headingSpeakers.textContent = content[slideIndex][buttonIndex].title;
+  descriptionSpeakers.textContent = content[slideIndex][buttonIndex].desc;
 }
 
-updateNavButtons();
+updateSpeakersNavButtons();

@@ -19,7 +19,7 @@
       <nav class="header_nav">
         <ul class="header_list">
           <li class="header_item">
-            <a class="header_link header_link_home" href="">Home</a>
+            <a class="header_link_home" href="">Home</a>
           </li>
           <li class="header_item">
             <a class="header_link" href="">About us</a>
@@ -123,10 +123,9 @@
     <section class="speakers_section section">
       <div class="speakers_container container">
         <h2 class="speakers_h2 h2">Спікери курсу</h2>
-        <div class="slider-container">
-          <div class="slider">
-
-            <div class="slide speakers_slide">
+        <div id="speakersSlider" class="speakers_slider-container">
+          <div class="speakers_slider">
+            <div class="speakers_slide">
               <div class="speakers_content_box">
                 <div class="speakers_content_right">
                   <img class="speakers_right_img" src="./images/speakers/web@1x.jpg" alt="Web Development"
@@ -134,30 +133,30 @@
                 </div>
                 <div class="speakers_content_left_bg">
                   <div class="speakers_content_left">
-                    <div class="speakers_left_text_container" id="textContainer1">
+                    <div class="speakers_left_text_container" id="textSpeakersContainer1">
                       <h4 class="speakers_text_heading h4" id="speakers_textHeading1">Web Development</h4>
                       <p class="speakers_text_description" id="speakers_textDescription1">Lorem ipsum dolor sit amet
                         consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
                     </div>
                     <div class="speakers_buttons">
-                      <button class="speakers_buttons_btn active" onclick="changeText(1, 1)">Web Development</button>
-                      <button class="speakers_buttons_btn" onclick="changeText(1, 2)">Digital Marketing</button>
-                      <button class="speakers_buttons_btn" onclick="changeText(1, 3)">SaaS Products</button>
-                      <button class="speakers_buttons_btn" onclick="changeText(1, 4)">Apps Development</button>
-                      <button class="speakers_buttons_btn" onclick="changeText(1, 5)">SEO Services</button>
-                      <button class="speakers_buttons_btn" onclick="changeText(1, 6)">Data Analysis</button>
+                      <button class="speakers_buttons_btn active" onclick="changeSpeakersText(1, 1)">Web
+                        Development</button>
+                      <button class="speakers_buttons_btn" onclick="changeSpeakersText(1, 2)">Digital Marketing</button>
+                      <button class="speakers_buttons_btn" onclick="changeSpeakersText(1, 3)">SaaS Products</button>
+                      <button class="speakers_buttons_btn" onclick="changeSpeakersText(1, 4)">Apps Development</button>
+                      <button class="speakers_buttons_btn" onclick="changeSpeakersText(1, 5)">SEO Services</button>
+                      <button class="speakers_buttons_btn" onclick="changeSpeakersText(1, 6)">Data Analysis</button>
                     </div>
-                    <div class="slider-nav">
-                      <button class="nav-button prev speakers_nav-button" onclick="changeSlide(-1)">❮</button>
-                      <span class="slide-indicator">1/3</span>
-                      <button class="nav-button next speakers_nav-button" onclick="changeSlide(1)">❯</button>
+                    <div class="speakers_slider-nav">
+                      <button class="speakers_nav-button prev" onclick="changeSpeakersSlide(-1)">❮</button>
+                      <span class="speakers_slide-indicator">1/3</span>
+                      <button class="speakers_nav-button next" onclick="changeSpeakersSlide(1)">❯</button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
-            <div class="slide speakers_slide">
+            <div class="speakers_slide">
               <div class="speakers_content_box">
                 <div class="speakers_content_right">
                   <img class="speakers_right_img" src="./images/speakers/Digital@1x.jpg" alt="Digital Marketing"
@@ -165,29 +164,31 @@
                 </div>
                 <div class="speakers_content_left_bg">
                   <div class="speakers_content_left">
-                    <div class="speakers_left_text_container" id="textContainer2">
+                    <div class="speakers_left_text_container" id="textSpeakersContainer2">
                       <h4 class="speakers_text_heading h4" id="speakers_textHeading2">Digital Marketing</h4>
                       <p class="speakers_text_description" id="speakers_textDescription2">Lorem ipsum dolor sit amet
                         consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
                     </div>
                     <div class="speakers_buttons">
-                      <button class="speakers_buttons_btn active" onclick="changeText(2, 1)">Web Development</button>
-                      <button class="speakers_buttons_btn" onclick="changeText(2, 2)">Digital Marketing</button>
-                      <button class="speakers_buttons_btn" onclick="changeText(2, 3)">SaaS Products</button>
-                      <button class="speakers_buttons_btn" onclick="changeText(2, 4)">Apps Development</button>
-                      <button class="speakers_buttons_btn" onclick="changeText(2, 5)">SEO Services</button>
-                      <button class="speakers_buttons_btn" onclick="changeText(2, 6)">Data Analysis</button>
+                      <button class="speakers_buttons_btn" onclick="changeSpeakersText(2, 1)">Web
+                        Development</button>
+                      <button class="speakers_buttons_btn active" onclick="changeSpeakersText(2, 2)">Digital
+                        Marketing</button>
+                      <button class="speakers_buttons_btn" onclick="changeSpeakersText(2, 3)">SaaS Products</button>
+                      <button class="speakers_buttons_btn" onclick="changeSpeakersText(2, 4)">Apps Development</button>
+                      <button class="speakers_buttons_btn" onclick="changeSpeakersText(2, 5)">SEO Services</button>
+                      <button class="speakers_buttons_btn" onclick="changeSpeakersText(2, 6)">Data Analysis</button>
                     </div>
-                    <div class="slider-nav">
-                      <button class="nav-button prev speakers_nav-button" onclick="changeSlide(-1)">❮</button>
-                      <span class="slide-indicator">2/3</span>
-                      <button class="nav-button next speakers_nav-button" onclick="changeSlide(1)">❯</button>
+                    <div class="speakers_slider-nav">
+                      <button class="speakers_nav-button prev" onclick="changeSpeakersSlide(-1)">❮</button>
+                      <span class="speakers_slide-indicator">2/3</span>
+                      <button class="speakers_nav-button next" onclick="changeSpeakersSlide(1)">❯</button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="slide speakers_slide">
+            <div class="speakers_slide">
               <div class="speakers_content_box">
                 <div class="speakers_content_right">
                   <img class="speakers_right_img" src="./images/speakers/SaaS@1x.jpg" alt="Data Science"
@@ -195,23 +196,25 @@
                 </div>
                 <div class="speakers_content_left_bg">
                   <div class="speakers_content_left">
-                    <div class="speakers_left_text_container" id="textContainer3">
-                      <h4 class="speakers_text_heading h4" id="speakers_textHeading3">Data Science</h4>
+                    <div class="speakers_left_text_container" id="textSpeakersContainer3">
+                      <h4 class="speakers_text_heading h4" id="speakers_textHeading3">SaaS Products</h4>
                       <p class="speakers_text_description" id="speakers_textDescription3">Lorem ipsum dolor sit amet
                         consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
                     </div>
                     <div class="speakers_buttons">
-                      <button class="speakers_buttons_btn active" onclick="changeText(3, 1)">Web Development</button>
-                      <button class="speakers_buttons_btn" onclick="changeText(3, 2)">Digital Marketing</button>
-                      <button class="speakers_buttons_btn" onclick="changeText(3, 3)">SaaS Products</button>
-                      <button class="speakers_buttons_btn" onclick="changeText(3, 4)">Apps Development</button>
-                      <button class="speakers_buttons_btn" onclick="changeText(3, 5)">SEO Services</button>
-                      <button class="speakers_buttons_btn" onclick="changeText(3, 6)">Data Analysis</button>
+                      <button class="speakers_buttons_btn" onclick="changeSpeakersText(3, 1)">Web
+                        Development</button>
+                      <button class="speakers_buttons_btn" onclick="changeSpeakersText(3, 2)">Digital Marketing</button>
+                      <button class="speakers_buttons_btn active" onclick="changeSpeakersText(3, 3)">SaaS
+                        Products</button>
+                      <button class="speakers_buttons_btn" onclick="changeSpeakersText(3, 4)">Apps Development</button>
+                      <button class="speakers_buttons_btn" onclick="changeSpeakersText(3, 5)">SEO Services</button>
+                      <button class="speakers_buttons_btn" onclick="changeSpeakersText(3, 6)">Data Analysis</button>
                     </div>
-                    <div class="slider-nav">
-                      <button class="nav-button prev speakers_nav-button" onclick="changeSlide(-1)">❮</button>
-                      <span class="slide-indicator">3/3</span>
-                      <button class="nav-button next speakers_nav-button" onclick="changeSlide(1)">❯</button>
+                    <div class="speakers_slider-nav">
+                      <button class="speakers_nav-button prev" onclick="changeSpeakersSlide(-1)">❮</button>
+                      <span class="speakers_slide-indicator">3/3</span>
+                      <button class="speakers_nav-button next" onclick="changeSpeakersSlide(1)">❯</button>
                     </div>
                   </div>
                 </div>
@@ -224,16 +227,14 @@
     <section class="training_section section">
       <div class="training_container container">
         <h2 class="training_h2 h2">Як проходить навчання</h2>
-
         <div id="trainingSlider" class="training_slider-container">
           <div class="training_slider">
-            <!-- Слайд 1 -->
             <div class="training_slide">
               <div class="training_content_box">
                 <div class="training_content_right">
                   <div class="training_content_right_box">
-                    <img class="training_right_img" src="./images/training/img1.jpg" alt="video">
-                    <button class="training_right_btn" type="button">Смотреть видео</button>
+                    <img class="training_right_img" src="./images/training/img1.jpg" alt="video" id="WatchTheVideo">
+                    <a href="#WatchTheVideo" class="training_right_btn" target="_blank">Смотреть видео</a>
                   </div>
                 </div>
                 <div class="training_content_left">
@@ -255,14 +256,12 @@
                 </div>
               </div>
             </div>
-
-            <!-- Слайд 2 -->
             <div class="training_slide">
               <div class="training_content_box">
                 <div class="training_content_right">
                   <div class="training_content_right_box">
-                    <img class="training_right_img" src="./images/training/img2.jpg" alt="video">
-                    <button class="training_right_btn" type="button">Смотреть видео</button>
+                    <img class="training_right_img" src="./images/training/img2.jpg" alt="video" id="WatchTheVideo">
+                    <a href="#WatchTheVideo" class="training_right_btn" target="_blank">Смотреть видео</a>
                   </div>
                 </div>
                 <div class="training_content_left">
@@ -285,14 +284,12 @@
                 </div>
               </div>
             </div>
-
-            <!-- Слайд 3 -->
             <div class="training_slide">
               <div class="training_content_box">
                 <div class="training_content_right">
                   <div class="training_content_right_box">
-                    <img class="training_right_img" src="./images/training/img3.jpg" alt="video">
-                    <button class="training_right_btn" type="button">Смотреть видео</button>
+                    <img class="training_right_img" src="./images/training/img3.jpg" alt="video" id="WatchTheVideo">
+                    <a href="#WatchTheVideo" class="training_right_btn" target="_blank">Смотреть видео</a>
                   </div>
                 </div>
                 <div class="training_content_left">
@@ -315,14 +312,12 @@
                 </div>
               </div>
             </div>
-
-            <!-- Слайд 4 -->
             <div class="training_slide">
               <div class="training_content_box">
                 <div class="training_content_right">
                   <div class="training_content_right_box">
-                    <img class="training_right_img" src="./images/training/img4.jpg" alt="video">
-                    <button class="training_right_btn" type="button">Смотреть видео</button>
+                    <img class="training_right_img" src="./images/training/img4.jpg" alt="video" id="WatchTheVideo">
+                    <a href="#WatchTheVideo" class="training_right_btn" target="_blank">Смотреть видео</a>
                   </div>
                 </div>
                 <div class="training_content_left">
@@ -350,14 +345,804 @@
       </div>
     </section>
 
+    <section class="cases_section section">
+      <div class="cases_container container">
+        <h2 class="cases_h2 h2">Кейси учнів</h2>
+        <div id="casesSlider" class="cases_slider-container">
+          <div class="cases_slider">
+
+            <div class="cases_slide">
+              <div class="cases_content_box">
+                <div class="cases_content_right">
+                  <img class="cases_right_img" src="./images/cases/img_01@1x.jpg" alt="Web Development"
+                    srcset="./images/cases/img_01@1x.jpg 1x, ./images/cases/img_01@2x.jpg 2x">
+                </div>
+                <div class="cases_content_left_bg">
+                  <div class="cases_content_left">
+                    <div class="cases_left_text_container" id="textCasesContainer1">
+                      <h4 class="cases_text_heading h4" id="cases_textHeading1">Web Development</h4>
+                      <p class="cases_text_description" id="cases_textDescription1">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
+                    </div>
+                    <div class="cases_buttons">
+                      <button class="cases_buttons_btn active" onclick="changeCasesText(1, 1)">Web Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(1, 2)">Digital Marketing</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(1, 3)">SaaS Products</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(1, 4)">Apps Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(1, 5)">SEO Services</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(1, 6)">Data Analysis</button>
+                    </div>
+                    <div class="cases_slider-nav">
+                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <span class="cases_slide-indicator">1/12</span>
+                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cases_slide">
+              <div class="cases_content_box">
+                <div class="cases_content_right">
+                  <img class="cases_right_img" src="./images/cases/img_02@1x.jpg" alt="Web Development"
+                    srcset="./images/cases/img_02@1x.jpg 1x, ./images/cases/img_02@2x.jpg 2x">
+                </div>
+                <div class="cases_content_left_bg">
+                  <div class="cases_content_left">
+                    <div class="cases_left_text_container" id="textCasesContainer2">
+                      <h4 class="cases_text_heading h4" id="cases_textHeading2">Web Development</h4>
+                      <p class="cases_text_description" id="cases_textDescription2">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
+                    </div>
+                    <div class="cases_buttons">
+                      <button class="cases_buttons_btn active" onclick="changeCasesText(2, 1)">Web Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(2, 2)">Digital Marketing</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(2, 3)">SaaS Products</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(2, 4)">Apps Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(2, 5)">SEO Services</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(2, 6)">Data Analysis</button>
+                    </div>
+                    <div class="cases_slider-nav">
+                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <span class="cases_slide-indicator">2/12</span>
+                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="cases_slide">
+              <div class="cases_content_box">
+                <div class="cases_content_right">
+                  <img class="cases_right_img" src="./images/cases/img_03@1x.jpg" alt="Web Development"
+                    srcset="./images/cases/img_03@1x.jpg 1x, ./images/cases/img_03@2x.jpg 2x">
+                </div>
+                <div class="cases_content_left_bg">
+                  <div class="cases_content_left">
+                    <div class="cases_left_text_container" id="textCasesContainer3">
+                      <h4 class="cases_text_heading h4" id="cases_textHeading3">Web Development</h4>
+                      <p class="cases_text_description" id="cases_textDescription3">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
+                    </div>
+                    <div class="cases_buttons">
+                      <button class="cases_buttons_btn active" onclick="changeCasesText(3, 1)">Web
+                        Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(3, 2)">Digital Marketing</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(3, 3)">SaaS Products</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(3, 4)">Apps Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(3, 5)">SEO Services</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(3, 6)">Data Analysis</button>
+                    </div>
+                    <div class="cases_slider-nav">
+                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <span class="cases_slide-indicator">3/12</span>
+                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cases_slide">
+              <div class="cases_content_box">
+                <div class="cases_content_right">
+                  <img class="cases_right_img" src="./images/cases/img_04@1x.jpg" alt="Web Development"
+                    srcset="./images/cases/img_04@1x.jpg 1x, ./images/cases/img_04@2x.jpg 2x">
+                </div>
+                <div class="cases_content_left_bg">
+                  <div class="cases_content_left">
+                    <div class="cases_left_text_container" id="textCasesContainer4">
+                      <h4 class="cases_text_heading h4" id="cases_textHeading4">Web Development</h4>
+                      <p class="cases_text_description" id="cases_textDescription4">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
+                    </div>
+                    <div class="cases_buttons">
+                      <button class="cases_buttons_btn active" onclick="changeCasesText(4, 1)">Web
+                        Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(4, 2)">Digital Marketing</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(4, 3)">SaaS Products</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(4, 4)">Apps Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(4, 5)">SEO Services</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(4, 6)">Data Analysis</button>
+                    </div>
+                    <div class="cases_slider-nav">
+                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <span class="cases_slide-indicator">4/12</span>
+                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cases_slide">
+              <div class="cases_content_box">
+                <div class="cases_content_right">
+                  <img class="cases_right_img" src="./images/cases/img_05@1x.jpg" alt="Web Development"
+                    srcset="./images/cases/img_05@1x.jpg 1x, ./images/cases/img_05@2x.jpg 2x">
+                </div>
+                <div class="cases_content_left_bg">
+                  <div class="cases_content_left">
+                    <div class="cases_left_text_container" id="textCasesContainer5">
+                      <h4 class="cases_text_heading h4" id="cases_textHeading5">Web Development</h4>
+                      <p class="cases_text_description" id="cases_textDescription5">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
+                    </div>
+                    <div class="cases_buttons">
+                      <button class="cases_buttons_btn active" onclick="changeCasesText(5, 1)">Web
+                        Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(5, 2)">Digital Marketing</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(5, 3)">SaaS Products</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(5, 4)">Apps Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(5, 5)">SEO Services</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(5, 6)">Data Analysis</button>
+                    </div>
+                    <div class="cases_slider-nav">
+                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <span class="cases_slide-indicator">5/12</span>
+                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cases_slide">
+              <div class="cases_content_box">
+                <div class="cases_content_right">
+                  <img class="cases_right_img" src="./images/cases/img_06@1x.jpg" alt="Web Development"
+                    srcset="./images/cases/img_06@1x.jpg 1x, ./images/cases/img_06@2x.jpg 2x">
+                </div>
+                <div class="cases_content_left_bg">
+                  <div class="cases_content_left">
+                    <div class="cases_left_text_container" id="textCasesContainer6">
+                      <h4 class="cases_text_heading h4" id="cases_textHeading6">Web Development</h4>
+                      <p class="cases_text_description" id="cases_textDescription6">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
+                    </div>
+                    <div class="cases_buttons">
+                      <button class="cases_buttons_btn active" onclick="changeCasesText(6, 1)">Web
+                        Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(6, 2)">Digital Marketing</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(6, 3)">SaaS Products</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(6, 4)">Apps Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(6, 5)">SEO Services</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(6, 6)">Data Analysis</button>
+                    </div>
+                    <div class="cases_slider-nav">
+                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <span class="cases_slide-indicator">6/12</span>
+                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cases_slide">
+              <div class="cases_content_box">
+                <div class="cases_content_right">
+                  <img class="cases_right_img" src="./images/cases/img_07@1x.jpg" alt="Web Development"
+                    srcset="./images/cases/img_07@1x.jpg 1x, ./images/cases/img_07@2x.jpg 2x">
+                </div>
+                <div class="cases_content_left_bg">
+                  <div class="cases_content_left">
+                    <div class="cases_left_text_container" id="textCasesContainer7">
+                      <h4 class="cases_text_heading h4" id="cases_textHeading7">Web Development</h4>
+                      <p class="cases_text_description" id="cases_textDescription7">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
+                    </div>
+                    <div class="cases_buttons">
+                      <button class="cases_buttons_btn active" onclick="changeCasesText(7, 1)">Web
+                        Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(7, 2)">Digital Marketing</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(7, 3)">SaaS Products</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(7, 4)">Apps Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(7, 5)">SEO Services</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(7, 6)">Data Analysis</button>
+                    </div>
+                    <div class="cases_slider-nav">
+                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <span class="cases_slide-indicator">7/12</span>
+                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cases_slide">
+              <div class="cases_content_box">
+                <div class="cases_content_right">
+                  <img class="cases_right_img" src="./images/cases/img_08@1x.jpg" alt="Web Development"
+                    srcset="./images/cases/img_08@1x.jpg 1x, ./images/cases/img_08@2x.jpg 2x">
+                </div>
+                <div class="cases_content_left_bg">
+                  <div class="cases_content_left">
+                    <div class="cases_left_text_container" id="textCasesContainer8">
+                      <h4 class="cases_text_heading h4" id="cases_textHeading8">Web Development</h4>
+                      <p class="cases_text_description" id="cases_textDescription8">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
+                    </div>
+                    <div class="cases_buttons">
+                      <button class="cases_buttons_btn active" onclick="changeCasesText(8, 1)">Web
+                        Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(8, 2)">Digital Marketing</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(8, 3)">SaaS Products</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(8, 4)">Apps Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(8, 5)">SEO Services</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(8, 6)">Data Analysis</button>
+                    </div>
+                    <div class="cases_slider-nav">
+                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <span class="cases_slide-indicator">8/12</span>
+                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cases_slide">
+              <div class="cases_content_box">
+                <div class="cases_content_right">
+                  <img class="cases_right_img" src="./images/cases/img_09@1x.jpg" alt="Web Development"
+                    srcset="./images/cases/img_09@1x.jpg 1x, ./images/cases/img_09@2x.jpg 2x">
+                </div>
+                <div class="cases_content_left_bg">
+                  <div class="cases_content_left">
+                    <div class="cases_left_text_container" id="textCasesContainer9">
+                      <h4 class="cases_text_heading h4" id="cases_textHeading9">Web Development</h4>
+                      <p class="cases_text_description" id="cases_textDescription9">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
+                    </div>
+                    <div class="cases_buttons">
+                      <button class="cases_buttons_btn active" onclick="changeCasesText(9, 1)">Web
+                        Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(9, 2)">Digital Marketing</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(9, 3)">SaaS Products</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(9, 4)">Apps Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(9, 5)">SEO Services</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(9, 6)">Data Analysis</button>
+                    </div>
+                    <div class="cases_slider-nav">
+                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <span class="cases_slide-indicator">9/12</span>
+                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cases_slide">
+              <div class="cases_content_box">
+                <div class="cases_content_right">
+                  <img class="cases_right_img" src="./images/cases/img_10@1x.jpg" alt="Web Development"
+                    srcset="./images/cases/img_10@1x.jpg 1x, ./images/cases/img_10@2x.jpg 2x">
+                </div>
+                <div class="cases_content_left_bg">
+                  <div class="cases_content_left">
+                    <div class="cases_left_text_container" id="textCasesContainer10">
+                      <h4 class="cases_text_heading h4" id="cases_textHeading10">Web Development</h4>
+                      <p class="cases_text_description" id="cases_textDescription10">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
+                    </div>
+                    <div class="cases_buttons">
+                      <button class="cases_buttons_btn active" onclick="changeCasesText(10, 1)">Web
+                        Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(10, 2)">Digital Marketing</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(10, 3)">SaaS Products</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(10, 4)">Apps Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(10, 5)">SEO Services</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(10, 6)">Data Analysis</button>
+                    </div>
+                    <div class="cases_slider-nav">
+                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <span class="cases_slide-indicator">10/12</span>
+                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cases_slide">
+              <div class="cases_content_box">
+                <div class="cases_content_right">
+                  <img class="cases_right_img" src="./images/cases/img_11@1x.jpg" alt="Web Development"
+                    srcset="./images/cases/img_11@1x.jpg 1x, ./images/cases/img_11@2x.jpg 2x">
+                </div>
+                <div class="cases_content_left_bg">
+                  <div class="cases_content_left">
+                    <div class="cases_left_text_container" id="textCasesContainer11">
+                      <h4 class="cases_text_heading h4" id="cases_textHeading11">Web Development</h4>
+                      <p class="cases_text_description" id="cases_textDescription11">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
+                    </div>
+                    <div class="cases_buttons">
+                      <button class="cases_buttons_btn active" onclick="changeCasesText(11, 1)">Web
+                        Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(11, 2)">Digital Marketing</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(11, 3)">SaaS Products</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(11, 4)">Apps Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(11, 5)">SEO Services</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(11, 6)">Data Analysis</button>
+                    </div>
+                    <div class="cases_slider-nav">
+                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <span class="cases_slide-indicator">11/12</span>
+                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cases_slide">
+              <div class="cases_content_box">
+                <div class="cases_content_right">
+                  <img class="cases_right_img" src="./images/cases/img_12@1x.jpg" alt="Web Development"
+                    srcset="./images/cases/img_12@1x.jpg 1x, ./images/cases/img_12@2x.jpg 2x">
+                </div>
+                <div class="cases_content_left_bg">
+                  <div class="cases_content_left">
+                    <div class="cases_left_text_container" id="textCasesContainer12">
+                      <h4 class="cases_text_heading h4" id="cases_textHeading12">Web Development</h4>
+                      <p class="cases_text_description" id="cases_textDescription12">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
+                    </div>
+                    <div class="cases_buttons">
+                      <button class="cases_buttons_btn active" onclick="changeCasesText(12, 1)">Web
+                        Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(12, 2)">Digital Marketing</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(12, 3)">SaaS Products</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(12, 4)">Apps Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(12, 5)">SEO Services</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(12, 6)">Data Analysis</button>
+                    </div>
+                    <div class="cases_slider-nav">
+                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <span class="cases_slide-indicator">12/12</span>
+                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="career_section section">
+      <div class="career_container container">
+        <h2 class="career_h2 h2">Центр кар'єри</h2>
+        <div class="career_slider-container">
+
+          <div class="career_slide career_active" id="career_slide1">
+            <div class="career_slide-content">
+              <div class="career_slide-text">
+                <h4 class="career_slide-h4 h4">Для взрослых</h4>
+                <p class="career_slide-description">ipsum dolor sit amet consectetur adipisicing elit. Quod, id sequi
+                  aut qui est ab, corporis quis maiores reiciendis
+                  explicabo odio tenetur nulla sint vel.</p>
+                <div class="career_hash-buttons">
+                  <button class="career_hash-button" data-slide="1">Востребованные профессии</button>
+                  <button class="career_hash-button" data-slide="2">Практика на реальных задачах</button>
+                </div>
+              </div>
+              <div class="career_slide-image">
+                <img src="./images/career/career1@1x.png"
+                  srcset="./images/career/career1@1x.png 1x, ./images/career/career1@2x.png 2x"
+                  alt="adults in the picture">
+              </div>
+            </div>
+          </div>
+
+          <div class="career_slide" id="career_slide2">
+            <div class="career_slide-content">
+              <div class="career_slide-text">
+                <h4 class="career_slide-h4 h4">Для взрослых</h4>
+                <p class="career_slide-description">ipsum dolor sit amet consectetur adipisicing elit. Quod, id sequi
+                  aut qui est ab, corporis quis maiores reiciendis
+                  explicabo odio tenetur nulla sint vel.</p>
+                <div class="career_hash-buttons">
+                  <button class="career_hash-button" data-slide="1">Востребованные профессии</button>
+                  <button class="career_hash-button" data-slide="2">Практика на реальных задачах</button>
+                </div>
+              </div>
+              <div class="career_slide-image">
+                <img src="./images/career/career2@1x.png"
+                  srcset="./images/career/career2@1x.png 1x, ./images/career/career2@2x.png 2x"
+                  alt="adults in the picture">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Not done -->
+    <section class="program_section section">
+      <div class="program_container container">
+        <h2 class="program_h2 h2">Програма курсу</h2>
+        <div id="casesSlider" class="cases_slider-container">
+          <div class="cases_slider">
+
+            <div class="cases_slide">
+              <div class="cases_content_box">
+                <div class="cases_content_right">
+                  <img class="cases_right_img" src="./images/cases/img_01@1x.jpg" alt="Web Development"
+                    srcset="./images/cases/img_01@1x.jpg 1x, ./images/cases/img_01@2x.jpg 2x">
+                </div>
+                <div class="cases_content_left_bg">
+                  <div class="cases_content_left">
+                    <div class="cases_left_text_container" id="textCasesContainer1">
+                      <h4 class="cases_text_heading h4" id="cases_textHeading1">Web Development</h4>
+                      <p class="cases_text_description" id="cases_textDescription1">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
+                    </div>
+                    <div class="cases_buttons">
+                      <button class="cases_buttons_btn active" onclick="changeCasesText(1, 1)">Web Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(1, 2)">Digital Marketing</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(1, 3)">SaaS Products</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(1, 4)">Apps Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(1, 5)">SEO Services</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(1, 6)">Data Analysis</button>
+                    </div>
+                    <div class="cases_slider-nav">
+                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <span class="cases_slide-indicator">1/12</span>
+                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cases_slide">
+              <div class="cases_content_box">
+                <div class="cases_content_right">
+                  <img class="cases_right_img" src="./images/cases/img_02@1x.jpg" alt="Web Development"
+                    srcset="./images/cases/img_02@1x.jpg 1x, ./images/cases/img_02@2x.jpg 2x">
+                </div>
+                <div class="cases_content_left_bg">
+                  <div class="cases_content_left">
+                    <div class="cases_left_text_container" id="textCasesContainer2">
+                      <h4 class="cases_text_heading h4" id="cases_textHeading2">Web Development</h4>
+                      <p class="cases_text_description" id="cases_textDescription2">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
+                    </div>
+                    <div class="cases_buttons">
+                      <button class="cases_buttons_btn active" onclick="changeCasesText(2, 1)">Web Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(2, 2)">Digital Marketing</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(2, 3)">SaaS Products</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(2, 4)">Apps Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(2, 5)">SEO Services</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(2, 6)">Data Analysis</button>
+                    </div>
+                    <div class="cases_slider-nav">
+                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <span class="cases_slide-indicator">2/12</span>
+                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="cases_slide">
+              <div class="cases_content_box">
+                <div class="cases_content_right">
+                  <img class="cases_right_img" src="./images/cases/img_03@1x.jpg" alt="Web Development"
+                    srcset="./images/cases/img_03@1x.jpg 1x, ./images/cases/img_03@2x.jpg 2x">
+                </div>
+                <div class="cases_content_left_bg">
+                  <div class="cases_content_left">
+                    <div class="cases_left_text_container" id="textCasesContainer3">
+                      <h4 class="cases_text_heading h4" id="cases_textHeading3">Web Development</h4>
+                      <p class="cases_text_description" id="cases_textDescription3">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
+                    </div>
+                    <div class="cases_buttons">
+                      <button class="cases_buttons_btn active" onclick="changeCasesText(3, 1)">Web
+                        Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(3, 2)">Digital Marketing</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(3, 3)">SaaS Products</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(3, 4)">Apps Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(3, 5)">SEO Services</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(3, 6)">Data Analysis</button>
+                    </div>
+                    <div class="cases_slider-nav">
+                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <span class="cases_slide-indicator">3/12</span>
+                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cases_slide">
+              <div class="cases_content_box">
+                <div class="cases_content_right">
+                  <img class="cases_right_img" src="./images/cases/img_04@1x.jpg" alt="Web Development"
+                    srcset="./images/cases/img_04@1x.jpg 1x, ./images/cases/img_04@2x.jpg 2x">
+                </div>
+                <div class="cases_content_left_bg">
+                  <div class="cases_content_left">
+                    <div class="cases_left_text_container" id="textCasesContainer4">
+                      <h4 class="cases_text_heading h4" id="cases_textHeading4">Web Development</h4>
+                      <p class="cases_text_description" id="cases_textDescription4">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
+                    </div>
+                    <div class="cases_buttons">
+                      <button class="cases_buttons_btn active" onclick="changeCasesText(4, 1)">Web
+                        Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(4, 2)">Digital Marketing</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(4, 3)">SaaS Products</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(4, 4)">Apps Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(4, 5)">SEO Services</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(4, 6)">Data Analysis</button>
+                    </div>
+                    <div class="cases_slider-nav">
+                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <span class="cases_slide-indicator">4/12</span>
+                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cases_slide">
+              <div class="cases_content_box">
+                <div class="cases_content_right">
+                  <img class="cases_right_img" src="./images/cases/img_05@1x.jpg" alt="Web Development"
+                    srcset="./images/cases/img_05@1x.jpg 1x, ./images/cases/img_05@2x.jpg 2x">
+                </div>
+                <div class="cases_content_left_bg">
+                  <div class="cases_content_left">
+                    <div class="cases_left_text_container" id="textCasesContainer5">
+                      <h4 class="cases_text_heading h4" id="cases_textHeading5">Web Development</h4>
+                      <p class="cases_text_description" id="cases_textDescription5">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
+                    </div>
+                    <div class="cases_buttons">
+                      <button class="cases_buttons_btn active" onclick="changeCasesText(5, 1)">Web
+                        Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(5, 2)">Digital Marketing</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(5, 3)">SaaS Products</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(5, 4)">Apps Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(5, 5)">SEO Services</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(5, 6)">Data Analysis</button>
+                    </div>
+                    <div class="cases_slider-nav">
+                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <span class="cases_slide-indicator">5/12</span>
+                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cases_slide">
+              <div class="cases_content_box">
+                <div class="cases_content_right">
+                  <img class="cases_right_img" src="./images/cases/img_06@1x.jpg" alt="Web Development"
+                    srcset="./images/cases/img_06@1x.jpg 1x, ./images/cases/img_06@2x.jpg 2x">
+                </div>
+                <div class="cases_content_left_bg">
+                  <div class="cases_content_left">
+                    <div class="cases_left_text_container" id="textCasesContainer6">
+                      <h4 class="cases_text_heading h4" id="cases_textHeading6">Web Development</h4>
+                      <p class="cases_text_description" id="cases_textDescription6">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
+                    </div>
+                    <div class="cases_buttons">
+                      <button class="cases_buttons_btn active" onclick="changeCasesText(6, 1)">Web
+                        Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(6, 2)">Digital Marketing</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(6, 3)">SaaS Products</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(6, 4)">Apps Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(6, 5)">SEO Services</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(6, 6)">Data Analysis</button>
+                    </div>
+                    <div class="cases_slider-nav">
+                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <span class="cases_slide-indicator">6/12</span>
+                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cases_slide">
+              <div class="cases_content_box">
+                <div class="cases_content_right">
+                  <img class="cases_right_img" src="./images/cases/img_07@1x.jpg" alt="Web Development"
+                    srcset="./images/cases/img_07@1x.jpg 1x, ./images/cases/img_07@2x.jpg 2x">
+                </div>
+                <div class="cases_content_left_bg">
+                  <div class="cases_content_left">
+                    <div class="cases_left_text_container" id="textCasesContainer7">
+                      <h4 class="cases_text_heading h4" id="cases_textHeading7">Web Development</h4>
+                      <p class="cases_text_description" id="cases_textDescription7">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
+                    </div>
+                    <div class="cases_buttons">
+                      <button class="cases_buttons_btn active" onclick="changeCasesText(7, 1)">Web
+                        Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(7, 2)">Digital Marketing</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(7, 3)">SaaS Products</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(7, 4)">Apps Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(7, 5)">SEO Services</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(7, 6)">Data Analysis</button>
+                    </div>
+                    <div class="cases_slider-nav">
+                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <span class="cases_slide-indicator">7/12</span>
+                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cases_slide">
+              <div class="cases_content_box">
+                <div class="cases_content_right">
+                  <img class="cases_right_img" src="./images/cases/img_08@1x.jpg" alt="Web Development"
+                    srcset="./images/cases/img_08@1x.jpg 1x, ./images/cases/img_08@2x.jpg 2x">
+                </div>
+                <div class="cases_content_left_bg">
+                  <div class="cases_content_left">
+                    <div class="cases_left_text_container" id="textCasesContainer8">
+                      <h4 class="cases_text_heading h4" id="cases_textHeading8">Web Development</h4>
+                      <p class="cases_text_description" id="cases_textDescription8">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
+                    </div>
+                    <div class="cases_buttons">
+                      <button class="cases_buttons_btn active" onclick="changeCasesText(8, 1)">Web
+                        Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(8, 2)">Digital Marketing</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(8, 3)">SaaS Products</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(8, 4)">Apps Development</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(8, 5)">SEO Services</button>
+                      <button class="cases_buttons_btn" onclick="changeCasesText(8, 6)">Data Analysis</button>
+                    </div>
+                    <div class="cases_slider-nav">
+                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <span class="cases_slide-indicator">8/12</span>
+                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+    </section>
+
+    <section class="community_section section">
+      <div class="community_container container">
+        <h2 class="community_h2 h2">Центр кар'єри</h2>
+        <div class="community_slider-container">
+
+          <div class="community_slide community_active" id="community_slide1">
+            <div class="community_slide-content">
+              <div class="community_slide-text">
+                <h4 class="community_slide-h4 h4">Експертна спільнота</h4>
+                <p class="community_slide-description">ipsum dolor sit amet consectetur adipisicing elit. Quod, id sequi
+                  aut qui est ab, corporis quis maiores reiciendis
+                  explicabo odio tenetur nulla sint velipsum dolor sit amet consectetur adipisicing elit. Quod, id sequi
+                  aut qui est ab, corporis quis maiores reiciendis explicabo odio tenetur nulla sint vel.</p>
+                <div class="community_hash-buttons">
+                  <button class="community_hash-button" data-slide="1">Востребованные профессии</button>
+                  <button class="community_hash-button" data-slide="2">Практика на реальных задачах</button>
+                </div>
+              </div>
+              <div class="community_slide-image">
+                <img src="./images/community/community1@1x.png"
+                  srcset="./images/community/community1@1x.png 1x, ./images/community/community1@2x.png 2x"
+                  alt="Adults in the picture">
+              </div>
+            </div>
+          </div>
+
+          <div class="community_slide" id="community_slide2">
+            <div class="community_slide-content">
+              <div class="community_slide-text">
+                <h4 class="community_slide-h4 h4">Центр карьеры</h4>
+                <p class="community_slide-description">ipsum dolor sit amet consectetur adipisicing elit. Quod, id sequi
+                  aut qui est ab, corporis quis maiores reiciendis
+                  explicabo odio tenetur nulla sint velipsum dolor sit amet consectetur adipisicing elit. Quod, id sequi
+                  aut qui est ab, corporis quis maiores reiciendis explicabo odio tenetur nulla sint vel.</p>
+                <div class="community_hash-buttons">
+                  <button class="community_hash-button" data-slide="1">Востребованные профессии</button>
+                  <button class="community_hash-button" data-slide="2">Практика на реальных задачах</button>
+                </div>
+              </div>
+              <div class="community_slide-image">
+                <img src="./images/community/community2@1x.png"
+                  srcset="./images/community/community2@1x.png 1x, ./images/community/community2@2x.png 2x"
+                  alt="Adults in the picture">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tuition_section section">
+      <div class="tuition_container container">
+        <h2 class="tuition_h2 h2">Тарифи навчання</h2>
+        <ul class="tuition_content">
+          <li class="tuition_content_one">
+            <div class="tuition_one">
+              <h5 class="tuition_content_h5 h5">Колеги</h5>
+              <p class="tuition_content_subtitle">Діє при оплаті навчання групи з трьох осіб</p>
+              <div class="tuition_content_column">
+                <div class="tuition_column_one">
+                  <p class="tuition_column_one_text">9 модулів за 6 тижнів</p>
+                  <p class="tuition_column_one_text">3 329<span>/місяць</span></p>
+                  <div class="tuition_column_one_aside">
+                    <p class="tuition_aside_text">3 329</p>
+                    <p class="tuition_aside_text">на 24 місяць</p>
+                  </div>
+                </div>
+
+                <!-- Зупинився тут:  Одними платежом -->
+
+                <div class="tuition_column_two"></div>
+              </div>
+            </div>
+          </li>
+          <li class="tuition_content_two">
+            <div class="tuition_two"></div>
+          </li>
+          <li class="tuition_content_three">
+            <div class="tuition_three"></div>
+          </li>
+        </ul>
+      </div>
+    </section>
 
   </main>
   <footer>
 
   </footer>
 
-  <script src="./js/slider.js"></script>
+  <script src="./js/speakers/speakersSlider.js"></script>
   <script src="./js/training/trainingSlider.js"></script>
+  <script src="./js/cases/cases.js"></script>
+  <script src="./js/career/career.js"></script>
+  <script src="./js/community/community.js"></script>
 </body>
 
 </html>
