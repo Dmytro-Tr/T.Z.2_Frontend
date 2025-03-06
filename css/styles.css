@@ -68,6 +68,7 @@ button {
   line-height: 120%;
   letter-spacing: 0%;
   color: #000;
+  margin-bottom: 40px;
 }
 
 .h3 {
@@ -280,7 +281,7 @@ button {
 
 .benefit_h2 {
   font-weight: 700;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 
 .benefit_content {
@@ -394,7 +395,7 @@ button {
 .speakers_container {}
 
 .speakers_h2 {
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 
 
@@ -501,7 +502,7 @@ button {
 }
 
 .training_h2 {
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 
 .slider-container {}
@@ -665,7 +666,7 @@ button {
 .cases_container {}
 
 .cases_h2 {
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 
 
@@ -772,7 +773,7 @@ button {
 }
 
 .career_h2 {
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 
 .career_slider-container {
@@ -864,7 +865,7 @@ button {
 }
 
 .community_h2 {
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 
 .community_slider-container {
@@ -1093,6 +1094,8 @@ button {
   gap: 8px;
   margin-bottom: 32px;
   color: #1b1b1b;
+  list-style: revert;
+  padding-left: 24.5px;
 }
 
 .tuition_content_list.active-cit {
@@ -1143,4 +1146,283 @@ button {
 .tuition_aside_text2.active-at2,
 .tuition_two_aside_price_text2.active-tapt {
   color: #e3e3e3;
+}
+
+/* ------------------reviews------------------ */
+.reviews_section {}
+
+.reviews_container {
+  max-width: 1200px;
+}
+
+.reviews_h2 {}
+
+.reviews_slider-container {
+  margin: 40px auto;
+  overflow: hidden;
+  background: #070707;
+  border-radius: 40px;
+  padding: 56px 0px
+}
+
+.reviews_slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+  position: relative;
+}
+
+.reviews_slide {
+  max-width: 33.333%;
+  /* Каждый слайд занимает 1/x ширины */
+  padding: 20px;
+  display: flex;
+  gap: 13px;
+  position: relative;
+}
+
+.reviews_slide:not(:last-child):after {
+  content: "";
+  width: 2px;
+  height: 211px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.reviews_slide_bracket {
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 100%;
+  color: #fff;
+}
+
+.reviews_slide_content {
+  padding-top: 33px;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+
+
+.reviews_slide_content_text {}
+
+.reviews_slide_content_name {}
+
+.reviews_content_name {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.reviews_content_profession {
+  font-style: italic;
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 100%;
+  color: #fff;
+}
+
+.reviews_slider-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviews_carousel-button {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+}
+
+.reviews_prev {}
+
+.reviews_next {}
+
+/* ---------------contactUs------------- */
+.contactUs_section {}
+
+.contactUs_container {}
+
+.contactUs_h2 {}
+
+.contactUs_content {
+  border-radius: 40px;
+  backdrop-filter: blur(44px);
+  background-color: #e2e6ee;
+}
+
+.contactUs_content_box {
+  padding: 69px 50px 40px 57px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 86px;
+}
+
+.contactUs_content_right {
+  flex-shrink: 0;
+}
+
+.contactUs_right_desc {
+  max-width: 455px;
+}
+
+.contactUs_h3 {
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 120%;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+.contactUs_right_text {
+  font-size: 18px;
+  line-height: 120%;
+  color: #636363;
+}
+
+.contactUs_content_left {}
+
+.contactUs_left_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.contactUs_input {
+  border-radius: 40px;
+  border-color: transparent;
+  padding: 16px 36px 16px 36px;
+  width: 415px;
+  background: #fff;
+  outline: transparent;
+}
+
+.contactUs_input {}
+
+.contactUs_input::placeholder {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  color: #969696;
+}
+
+.contactUs_input_text {}
+
+.contactUs_input_email {}
+
+.contactUs_input_tel {}
+
+.contactUs_form_desc {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #414141;
+  margin-bottom: 25px;
+}
+
+.contactUs_form_btn {
+  padding: 16px 150px;
+  border-radius: 40px;
+  background-color: #000;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  color: #fff;
+}
+
+/* --------------footer---------------- */
+.footer {
+  border-radius: 60px 60px 0 0;
+  background-color: #000;
+}
+
+.footer_container {
+  max-width: 1281px;
+}
+
+.container {}
+
+.footer_logo {
+  padding: 40px 0 34px 108px;
+}
+
+.footer_content {
+  padding-left: 107px;
+  padding-right: 21.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 66px;
+}
+
+.footer_content_text {
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  max-width: 403px;
+}
+
+.footer_content_contacts {}
+
+.footer_contacts_title {
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.footer_contacts_address {}
+
+.footer_adsress_link {
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+}
+
+.footer_address_list {
+  display: flex;
+  flex-direction: column;
+  gap: 12.5px;
+}
+
+.footer_address_item {}
+
+.footer_address_svg {
+  margin-right: 15px;
+}
+
+.footer_privacy {
+  padding-left: 107.5px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_privacy_created {
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+}
+
+.footer_privacy_policy {
+  display: flex;
+  gap: 32px;
+}
+
+.footer_privacy_link {
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
 }
