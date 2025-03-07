@@ -16,35 +16,83 @@
 <body>
   <header class="header">
     <div class="header_container container">
+      <a class="header_logo" href="index.html">
+        <img class="header_logo_img" src="./images/header/Logo_header.png" alt="logo">
+      </a>
       <nav class="header_nav">
         <ul class="header_list">
           <li class="header_item">
-            <a class="header_link_home" href="">Home</a>
+            <a class="header_link_home" href="#">Home</a>
           </li>
           <li class="header_item">
-            <a class="header_link" href="">About us</a>
+            <a class="header_link" href="#aboutUs">About us</a>
           </li>
           <li class="header_item">
-            <a class="header_link" href="">Services</a>
+            <a class="header_link" href="#services">Services</a>
           </li>
           <li class="header_item">
-            <a class="header_link" href="">Portfolio</a>
+            <a class="header_link" href="#Portfolio">Portfolio</a>
           </li>
           <li class="header_item">
-            <a class="header_link" href="">Blog</a>
+            <a class="header_link" href="#blog">Blog</a>
           </li>
           <li class="header_item">
-            <a class="header_link" href="">Pages</a>
+            <a class="header_link" href="#pages">Pages</a>
           </li>
           <li class="header_item">
-            <a class="header_link" href="">Contact us</a>
+            <a class="header_link" href="#contactUs">Contact us</a>
           </li>
         </ul>
       </nav>
       <!-- modal button -->
-      <button class="header_burger_button" type="button">X</button>
+      <button class="burger_button" type="button">
+        <svg class="medium_indicator_svg" width="20" height="14">
+          <use href="./images/icons.svg#icon-burger-menu"></use>
+        </svg>
+      </button>
     </div>
   </header>
+  <!-- modal menu -->
+  <div class="mobile_menu js-menu-container" id="mobile-menu">
+    <div class="mobile-menu-container">
+      <div class="mobile-menu-box">
+        <a class="mobile_link_logo" href="index.html">
+          <img class="mobile_logo" src="./images/header/logo_modal.png" alt="logo">
+        </a>
+        <nav class="mobile_nav">
+          <ul class="mobile_list">
+            <li class="mobile_item">
+              <a class="mobile_link mobile_link_home" href="#">Home
+                <!-- <img src="./images/header/circle.png" alt="circle"> -->
+                <!-- <svg class="mobile_circle_svg" width="21" height="20">
+                  <use href="/images/icons.svg#icon-mobile-circle"></use>
+                </svg> -->
+              </a>
+            </li>
+            <li class="mobile_item">
+              <a class="mobile_link" href="#aboutUs">About us</a>
+            </li>
+            <li class="mobile_item">
+              <a class="mobile_link" href="#services">Services</a>
+            </li>
+            <li class="mobile_item">
+              <a class="mobile_link" href="#Portfolio">Portfolio</a>
+            </li>
+            <li class="mobile_item">
+              <a class="mobile_link" href="#blog">Blog</a>
+            </li>
+            <li class="mobile_item">
+              <a class="mobile_link" href="#pages">Pages</a>
+            </li>
+            <li class="mobile_item">
+              <a class="mobile_link" href="#contactUs">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
   <main>
     <section class="hero_section section">
       <div class="hero_container container">
@@ -53,7 +101,7 @@
           <p class="hero_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. A officia molestiae dolorum
             tempora ut accusamus cupiditate!
             Nesciunt tempora reiciendis libero voluptate!</p>
-          <button class="hero_button button" type="button">Зарегистрироваться</button>
+          <a class="hero_button button" href="#contactUs">Зарегистрироваться</a>
         </div>
         <div class="hero_image_box">
           <img class="hero_img" src="./images/hero/Group_106_1x.png" alt="image"
@@ -122,7 +170,7 @@
 
     <section class="speakers_section section">
       <div class="speakers_container container">
-        <h2 class="speakers_h2 h2">Спікери курсу</h2>
+        <h2 class="speakers_h2 h2" id="aboutUs">Спікери курсу</h2>
         <div id="speakersSlider" class="speakers_slider-container">
           <div class="speakers_slider">
             <div class="speakers_slide">
@@ -148,9 +196,17 @@
                       <button class="speakers_buttons_btn" onclick="changeSpeakersText(1, 6)">Data Analysis</button>
                     </div>
                     <div class="speakers_slider-nav">
-                      <button class="speakers_nav-button prev" onclick="changeSpeakersSlide(-1)">❮</button>
+                      <button class="speakers_nav-button prev nav_button_medium" onclick="changeSpeakersSlide(-1)">
+                        <svg class="speakers_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-left-medium"></use>
+                        </svg>
+                      </button>
                       <span class="speakers_slide-indicator">1/3</span>
-                      <button class="speakers_nav-button next" onclick="changeSpeakersSlide(1)">❯</button>
+                      <button class="speakers_nav-button next nav_button_medium" onclick="changeSpeakersSlide(1)">
+                        <svg class="speakers_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-right-medium"></use>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -180,9 +236,17 @@
                       <button class="speakers_buttons_btn" onclick="changeSpeakersText(2, 6)">Data Analysis</button>
                     </div>
                     <div class="speakers_slider-nav">
-                      <button class="speakers_nav-button prev" onclick="changeSpeakersSlide(-1)">❮</button>
+                      <button class="speakers_nav-button prev nav_button_medium" onclick="changeSpeakersSlide(-1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-left-medium"></use>
+                        </svg>
+                      </button>
                       <span class="speakers_slide-indicator">2/3</span>
-                      <button class="speakers_nav-button next" onclick="changeSpeakersSlide(1)">❯</button>
+                      <button class="speakers_nav-button next nav_button_medium" onclick="changeSpeakersSlide(1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-right-medium"></use>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -212,9 +276,17 @@
                       <button class="speakers_buttons_btn" onclick="changeSpeakersText(3, 6)">Data Analysis</button>
                     </div>
                     <div class="speakers_slider-nav">
-                      <button class="speakers_nav-button prev" onclick="changeSpeakersSlide(-1)">❮</button>
+                      <button class="speakers_nav-button prev nav_button_medium" onclick="changeSpeakersSlide(-1)">
+                        <svg class="speakers_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-left-medium"></use>
+                        </svg>
+                      </button>
                       <span class="speakers_slide-indicator">3/3</span>
-                      <button class="speakers_nav-button next" onclick="changeSpeakersSlide(1)">❯</button>
+                      <button class="speakers_nav-button next nav_button_medium" onclick="changeSpeakersSlide(1)">
+                        <svg class="speakers_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-right-medium"></use>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -226,15 +298,21 @@
 
     <section class="training_section section">
       <div class="training_container container">
-        <h2 class="training_h2 h2">Як проходить навчання</h2>
+        <h2 class="training_h2 h2" id="services">Як проходить навчання</h2>
         <div id="trainingSlider" class="training_slider-container">
           <div class="training_slider">
             <div class="training_slide">
               <div class="training_content_box">
                 <div class="training_content_right">
                   <div class="training_content_right_box">
-                    <img class="training_right_img" src="./images/training/img1.jpg" alt="video" id="WatchTheVideo">
-                    <a href="#WatchTheVideo" class="training_right_btn" target="_blank">Смотреть видео</a>
+                    <img class="training_right_img" src="./images/training/img1.jpg"
+                      srcset="./images/training/img1.jpg 1x ./images/training/image1@2x.jpg 2x" alt="video"
+                      id="WatchTheVideo">
+                    <a href="#WatchTheVideo" class="training_right_btn" target="_blank">
+                      <svg class="play_indicator_svg" width="23" height="21">
+                        <use href="./images/icons.svg#icon-play_circle"></use>
+                      </svg>
+                      Смотреть видео</a>
                   </div>
                 </div>
                 <div class="training_content_left">
@@ -248,9 +326,17 @@
                       pretium vestibulum
                       elit. A massa adipiscing pellentesque tempor ac vel.</p>
                     <div class="training_slider-nav">
-                      <button class="training_nav-button prev" onclick="changeTrainingSlide(-1)">❮</button>
+                      <button class="training_nav-button prev nav_button_medium" onclick="changeTrainingSlide(-1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-left-medium"></use>
+                        </svg>
+                      </button>
                       <span class="training_slide-indicator">1/4</span>
-                      <button class="training_nav-button next" onclick="changeTrainingSlide(1)">❯</button>
+                      <button class="training_nav-button next nav_button_medium" onclick="changeTrainingSlide(1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-right-medium"></use>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -260,8 +346,14 @@
               <div class="training_content_box">
                 <div class="training_content_right">
                   <div class="training_content_right_box">
-                    <img class="training_right_img" src="./images/training/img2.jpg" alt="video" id="WatchTheVideo">
-                    <a href="#WatchTheVideo" class="training_right_btn" target="_blank">Смотреть видео</a>
+                    <img class="training_right_img" src="./images/training/img2.jpg"
+                      srcset="./images/training/img2.jpg 1x ./images/training/image2@2x.jpg 2x" alt="video"
+                      id="WatchTheVideo">
+                    <a href="#WatchTheVideo" class="training_right_btn" target="_blank">
+                      <svg class="play_indicator_svg" width="23" height="21">
+                        <use href="./images/icons.svg#icon-play_circle"></use>
+                      </svg>
+                      Смотреть видео</a>
                   </div>
                 </div>
                 <div class="training_content_left">
@@ -276,9 +368,17 @@
                       elit. A massa adipiscing pellentesque tempor ac vel.
                     </p>
                     <div class="training_slider-nav">
-                      <button class="training_nav-button prev" onclick="changeTrainingSlide(-1)">❮</button>
+                      <button class="training_nav-button prev nav_button_medium" onclick="changeTrainingSlide(-1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-left-medium"></use>
+                        </svg>
+                      </button>
                       <span class="training_slide-indicator">1/4</span>
-                      <button class="training_nav-button next" onclick="changeTrainingSlide(1)">❯</button>
+                      <button class="training_nav-button next nav_button_medium" onclick="changeTrainingSlide(1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-right-medium"></use>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -288,8 +388,14 @@
               <div class="training_content_box">
                 <div class="training_content_right">
                   <div class="training_content_right_box">
-                    <img class="training_right_img" src="./images/training/img3.jpg" alt="video" id="WatchTheVideo">
-                    <a href="#WatchTheVideo" class="training_right_btn" target="_blank">Смотреть видео</a>
+                    <img class="training_right_img" src="./images/training/img3.jpg"
+                      srcset="./images/training/img3.jpg 1x ./images/training/image3@2x.jpg 2x" alt="video"
+                      id="WatchTheVideo">
+                    <a href="#WatchTheVideo" class="training_right_btn" target="_blank">
+                      <svg class="play_indicator_svg" width="23" height="21">
+                        <use href="./images/icons.svg#icon-play_circle"></use>
+                      </svg>
+                      Смотреть видео</a>
                   </div>
                 </div>
                 <div class="training_content_left">
@@ -304,9 +410,17 @@
                       elit. A massa adipiscing pellentesque tempor ac vel.
                     </p>
                     <div class="training_slider-nav">
-                      <button class="training_nav-button prev" onclick="changeTrainingSlide(-1)">❮</button>
+                      <button class="training_nav-button prev nav_button_medium" onclick="changeTrainingSlide(-1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-left-medium"></use>
+                        </svg>
+                      </button>
                       <span class="training_slide-indicator">1/4</span>
-                      <button class="training_nav-button next" onclick="changeTrainingSlide(1)">❯</button>
+                      <button class="training_nav-button next nav_button_medium" onclick="changeTrainingSlide(1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-right-medium"></use>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -316,8 +430,14 @@
               <div class="training_content_box">
                 <div class="training_content_right">
                   <div class="training_content_right_box">
-                    <img class="training_right_img" src="./images/training/img4.jpg" alt="video" id="WatchTheVideo">
-                    <a href="#WatchTheVideo" class="training_right_btn" target="_blank">Смотреть видео</a>
+                    <img class="training_right_img" src="./images/training/img4.jpg"
+                      srcset="./images/training/img4.jpg 1x ./images/training/image4@2x.jpg 2x" alt="video"
+                      id="WatchTheVideo">
+                    <a href="#WatchTheVideo" class="training_right_btn" target="_blank">
+                      <svg class="play_indicator_svg" width="23" height="21">
+                        <use href="./images/icons.svg#icon-play_circle"></use>
+                      </svg>
+                      Смотреть видео</a>
                   </div>
                 </div>
                 <div class="training_content_left">
@@ -332,9 +452,17 @@
                       elit. A massa adipiscing pellentesque tempor ac vel.
                     </p>
                     <div class="training_slider-nav">
-                      <button class="training_nav-button prev" onclick="changeTrainingSlide(-1)">❮</button>
+                      <button class="training_nav-button prev nav_button_medium" onclick="changeTrainingSlide(-1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-left-medium"></use>
+                        </svg>
+                      </button>
                       <span class="training_slide-indicator">1/4</span>
-                      <button class="training_nav-button next" onclick="changeTrainingSlide(1)">❯</button>
+                      <button class="training_nav-button next nav_button_medium" onclick="changeTrainingSlide(1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-right-medium"></use>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -347,7 +475,7 @@
 
     <section class="cases_section section">
       <div class="cases_container container">
-        <h2 class="cases_h2 h2">Кейси учнів</h2>
+        <h2 class="cases_h2 h2" id="Portfolio">Кейси учнів</h2>
         <div id="casesSlider" class="cases_slider-container">
           <div class="cases_slider">
 
@@ -373,10 +501,19 @@
                       <button class="cases_buttons_btn" onclick="changeCasesText(1, 6)">Data Analysis</button>
                     </div>
                     <div class="cases_slider-nav">
-                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <button class="cases_nav-button prev nav_button_medium" onclick="changeCasesSlide(-1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-left-medium"></use>
+                        </svg>
+                      </button>
                       <span class="cases_slide-indicator">1/12</span>
-                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                      <button class="cases_nav-button next nav_button_medium" onclick="changeCasesSlide(1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-right-medium"></use>
+                        </svg>
+                      </button>
                     </div>
+
                   </div>
                 </div>
               </div>
@@ -404,9 +541,17 @@
                       <button class="cases_buttons_btn" onclick="changeCasesText(2, 6)">Data Analysis</button>
                     </div>
                     <div class="cases_slider-nav">
-                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <button class="cases_nav-button prev nav_button_medium" onclick="changeCasesSlide(-1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-left-medium"></use>
+                        </svg>
+                      </button>
                       <span class="cases_slide-indicator">2/12</span>
-                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                      <button class="cases_nav-button next nav_button_medium" onclick="changeCasesSlide(1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-right-medium"></use>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -436,9 +581,17 @@
                       <button class="cases_buttons_btn" onclick="changeCasesText(3, 6)">Data Analysis</button>
                     </div>
                     <div class="cases_slider-nav">
-                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <button class="cases_nav-button prev nav_button_medium" onclick="changeCasesSlide(-1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-left-medium"></use>
+                        </svg>
+                      </button>
                       <span class="cases_slide-indicator">3/12</span>
-                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                      <button class="cases_nav-button next nav_button_medium" onclick="changeCasesSlide(1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-right-medium"></use>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -468,9 +621,17 @@
                       <button class="cases_buttons_btn" onclick="changeCasesText(4, 6)">Data Analysis</button>
                     </div>
                     <div class="cases_slider-nav">
-                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <button class="cases_nav-button prev nav_button_medium" onclick="changeCasesSlide(-1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-left-medium"></use>
+                        </svg>
+                      </button>
                       <span class="cases_slide-indicator">4/12</span>
-                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                      <button class="cases_nav-button next nav_button_medium" onclick="changeCasesSlide(1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-right-medium"></use>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -500,9 +661,17 @@
                       <button class="cases_buttons_btn" onclick="changeCasesText(5, 6)">Data Analysis</button>
                     </div>
                     <div class="cases_slider-nav">
-                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <button class="cases_nav-button prev nav_button_medium" onclick="changeCasesSlide(-1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-left-medium"></use>
+                        </svg>
+                      </button>
                       <span class="cases_slide-indicator">5/12</span>
-                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                      <button class="cases_nav-button next nav_button_medium" onclick="changeCasesSlide(1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-right-medium"></use>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -532,9 +701,17 @@
                       <button class="cases_buttons_btn" onclick="changeCasesText(6, 6)">Data Analysis</button>
                     </div>
                     <div class="cases_slider-nav">
-                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <button class="cases_nav-button prev nav_button_medium" onclick="changeCasesSlide(-1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-left-medium"></use>
+                        </svg>
+                      </button>
                       <span class="cases_slide-indicator">6/12</span>
-                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                      <button class="cases_nav-button next nav_button_medium" onclick="changeCasesSlide(1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-right-medium"></use>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -564,9 +741,17 @@
                       <button class="cases_buttons_btn" onclick="changeCasesText(7, 6)">Data Analysis</button>
                     </div>
                     <div class="cases_slider-nav">
-                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <button class="cases_nav-button prev nav_button_medium" onclick="changeCasesSlide(-1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-left-medium"></use>
+                        </svg>
+                      </button>
                       <span class="cases_slide-indicator">7/12</span>
-                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                      <button class="cases_nav-button next nav_button_medium" onclick="changeCasesSlide(1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-right-medium"></use>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -596,9 +781,17 @@
                       <button class="cases_buttons_btn" onclick="changeCasesText(8, 6)">Data Analysis</button>
                     </div>
                     <div class="cases_slider-nav">
-                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <button class="cases_nav-button prev nav_button_medium" onclick="changeCasesSlide(-1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-left-medium"></use>
+                        </svg>
+                      </button>
                       <span class="cases_slide-indicator">8/12</span>
-                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                      <button class="cases_nav-button next nav_button_medium" onclick="changeCasesSlide(1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-right-medium"></use>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -628,9 +821,17 @@
                       <button class="cases_buttons_btn" onclick="changeCasesText(9, 6)">Data Analysis</button>
                     </div>
                     <div class="cases_slider-nav">
-                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <button class="cases_nav-button prev nav_button_medium" onclick="changeCasesSlide(-1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-left-medium"></use>
+                        </svg>
+                      </button>
                       <span class="cases_slide-indicator">9/12</span>
-                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                      <button class="cases_nav-button next nav_button_medium" onclick="changeCasesSlide(1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-right-medium"></use>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -660,9 +861,17 @@
                       <button class="cases_buttons_btn" onclick="changeCasesText(10, 6)">Data Analysis</button>
                     </div>
                     <div class="cases_slider-nav">
-                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <button class="cases_nav-button prev nav_button_medium" onclick="changeCasesSlide(-1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-left-medium"></use>
+                        </svg>
+                      </button>
                       <span class="cases_slide-indicator">10/12</span>
-                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                      <button class="cases_nav-button next nav_button_medium" onclick="changeCasesSlide(1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-right-medium"></use>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -692,9 +901,17 @@
                       <button class="cases_buttons_btn" onclick="changeCasesText(11, 6)">Data Analysis</button>
                     </div>
                     <div class="cases_slider-nav">
-                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <button class="cases_nav-button prev nav_button_medium" onclick="changeCasesSlide(-1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-left-medium"></use>
+                        </svg>
+                      </button>
                       <span class="cases_slide-indicator">11/12</span>
-                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                      <button class="cases_nav-button next nav_button_medium" onclick="changeCasesSlide(1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-right-medium"></use>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -724,9 +941,17 @@
                       <button class="cases_buttons_btn" onclick="changeCasesText(12, 6)">Data Analysis</button>
                     </div>
                     <div class="cases_slider-nav">
-                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
+                      <button class="cases_nav-button prev nav_button_medium" onclick="changeCasesSlide(-1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-left-medium"></use>
+                        </svg>
+                      </button>
                       <span class="cases_slide-indicator">12/12</span>
-                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                      <button class="cases_nav-button next nav_button_medium" onclick="changeCasesSlide(1)">
+                        <svg class="medium_indicator_svg" width="16" height="17">
+                          <use href="./images/icons.svg#icon-right-medium"></use>
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -784,261 +1009,398 @@
       </div>
     </section>
 
-    <!-- Not done -->
     <section class="program_section section">
       <div class="program_container container">
-        <h2 class="program_h2 h2">Програма курсу</h2>
-        <div id="casesSlider" class="cases_slider-container">
-          <div class="cases_slider">
+        <h2 class="program_h2 h2" id="blog">Програма курсу</h2>
+        <div id="programSlider" class="program_slider-container">
+          <div class="program_slider">
 
-            <div class="cases_slide">
-              <div class="cases_content_box">
-                <div class="cases_content_right">
-                  <img class="cases_right_img" src="./images/cases/img_01@1x.jpg" alt="Web Development"
-                    srcset="./images/cases/img_01@1x.jpg 1x, ./images/cases/img_01@2x.jpg 2x">
+            <div class="program_slide">
+              <div class="program_content_box">
+                <div class="program_content_right">
+                  <img class="program_right_img" src="./images/program/image_01@1x.jpg" alt="Web Development"
+                    srcset="./images/program/image_01@1x.jpg 1x, ../images/program/image_01@2x.jpg 2x">
                 </div>
-                <div class="cases_content_left_bg">
-                  <div class="cases_content_left">
-                    <div class="cases_left_text_container" id="textCasesContainer1">
-                      <h4 class="cases_text_heading h4" id="cases_textHeading1">Web Development</h4>
-                      <p class="cases_text_description" id="cases_textDescription1">Lorem ipsum dolor sit amet
+                <div class="program_content_left_bg">
+                  <div class="program_content_left">
+                    <div class="program_left_text_container" id="textProgramContainer1">
+                      <h4 class="program_text_heading h4" id="program_textHeading1">Web Development</h4>
+                      <p class="program_text_description" id="program_textDescription1">Lorem ipsum dolor sit amet
                         consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
                     </div>
-                    <div class="cases_buttons">
-                      <button class="cases_buttons_btn active" onclick="changeCasesText(1, 1)">Web Development</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(1, 2)">Digital Marketing</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(1, 3)">SaaS Products</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(1, 4)">Apps Development</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(1, 5)">SEO Services</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(1, 6)">Data Analysis</button>
+                    <div class="program_slider_nav_box">
+                      <p class="program_nav_box_text">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                      <div class="program_slider_nav">
+                        <span class="program_slide_indicator program_indicator">1</span>
+                        <button class="program_nav_button prev nav_button_small" onclick="changeProgramSlide(-1)">
+                          <svg class="small_indicator_svg" width="21" height="20">
+                            <use href="./images/icons.svg#icon-left-small"></use>
+                          </svg>
+                        </button>
+                        <button class="program_nav_button plus nav_button_plus" onclick="changeProgramPLus()">
+                          <svg class="small_indicator_svg" width="21" height="20">
+                            <use href="./images/icons.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                        <button class="program_nav_button next nav_button_small" onclick="changeProgramSlide(1)">
+                          <svg class="small_indicator_svg" width="21" height="20">
+                            <use href="./images/icons.svg#icon-right-small"></use>
+                          </svg>
+                        </button>
+                        <span class="program_indicator">8</span>
+                      </div>
                     </div>
-                    <div class="cases_slider-nav">
-                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
-                      <span class="cases_slide-indicator">1/12</span>
-                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="cases_slide">
-              <div class="cases_content_box">
-                <div class="cases_content_right">
-                  <img class="cases_right_img" src="./images/cases/img_02@1x.jpg" alt="Web Development"
-                    srcset="./images/cases/img_02@1x.jpg 1x, ./images/cases/img_02@2x.jpg 2x">
-                </div>
-                <div class="cases_content_left_bg">
-                  <div class="cases_content_left">
-                    <div class="cases_left_text_container" id="textCasesContainer2">
-                      <h4 class="cases_text_heading h4" id="cases_textHeading2">Web Development</h4>
-                      <p class="cases_text_description" id="cases_textDescription2">Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
-                    </div>
-                    <div class="cases_buttons">
-                      <button class="cases_buttons_btn active" onclick="changeCasesText(2, 1)">Web Development</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(2, 2)">Digital Marketing</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(2, 3)">SaaS Products</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(2, 4)">Apps Development</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(2, 5)">SEO Services</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(2, 6)">Data Analysis</button>
-                    </div>
-                    <div class="cases_slider-nav">
-                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
-                      <span class="cases_slide-indicator">2/12</span>
-                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div class="cases_slide">
-              <div class="cases_content_box">
-                <div class="cases_content_right">
-                  <img class="cases_right_img" src="./images/cases/img_03@1x.jpg" alt="Web Development"
-                    srcset="./images/cases/img_03@1x.jpg 1x, ./images/cases/img_03@2x.jpg 2x">
-                </div>
-                <div class="cases_content_left_bg">
-                  <div class="cases_content_left">
-                    <div class="cases_left_text_container" id="textCasesContainer3">
-                      <h4 class="cases_text_heading h4" id="cases_textHeading3">Web Development</h4>
-                      <p class="cases_text_description" id="cases_textDescription3">Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
-                    </div>
-                    <div class="cases_buttons">
-                      <button class="cases_buttons_btn active" onclick="changeCasesText(3, 1)">Web
+                    <div class="program_buttons">
+                      <button class="program_buttons_btn active" onclick="changeProgramText(1, 1)">Web
                         Development</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(3, 2)">Digital Marketing</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(3, 3)">SaaS Products</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(3, 4)">Apps Development</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(3, 5)">SEO Services</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(3, 6)">Data Analysis</button>
-                    </div>
-                    <div class="cases_slider-nav">
-                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
-                      <span class="cases_slide-indicator">3/12</span>
-                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(1, 2)">Digital Marketing</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(1, 3)">SaaS Products</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(1, 4)">Apps Development</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(1, 5)">SEO Services</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(1, 6)">Data Analysis</button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="cases_slide">
-              <div class="cases_content_box">
-                <div class="cases_content_right">
-                  <img class="cases_right_img" src="./images/cases/img_04@1x.jpg" alt="Web Development"
-                    srcset="./images/cases/img_04@1x.jpg 1x, ./images/cases/img_04@2x.jpg 2x">
+            <div class="program_slide">
+              <div class="program_content_box">
+                <div class="program_content_right">
+                  <img class="program_right_img" src="./images/program/image_02@1x.jpg" alt="Web Development"
+                    srcset="./images/program/image_02@1x.jpg 1x, ./images/program/image_02@2x.jpg 2x">
                 </div>
-                <div class="cases_content_left_bg">
-                  <div class="cases_content_left">
-                    <div class="cases_left_text_container" id="textCasesContainer4">
-                      <h4 class="cases_text_heading h4" id="cases_textHeading4">Web Development</h4>
-                      <p class="cases_text_description" id="cases_textDescription4">Lorem ipsum dolor sit amet
+                <div class="program_content_left_bg">
+                  <div class="program_content_left">
+                    <div class="program_left_text_container" id="textProgramContainer2">
+                      <h4 class="program_text_heading h4" id="program_textHeading2">Web Development</h4>
+                      <p class="program_text_description" id="program_textDescription2">Lorem ipsum dolor sit amet
                         consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
                     </div>
-                    <div class="cases_buttons">
-                      <button class="cases_buttons_btn active" onclick="changeCasesText(4, 1)">Web
-                        Development</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(4, 2)">Digital Marketing</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(4, 3)">SaaS Products</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(4, 4)">Apps Development</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(4, 5)">SEO Services</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(4, 6)">Data Analysis</button>
+                    <div class="program_slider_nav_box">
+                      <p class="program_nav_box_text">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                      <div class="program_slider_nav">
+                        <span class="program_slide_indicator program_indicator">2</span>
+                        <button class="program_nav_button prev nav_button_small" onclick="changeProgramSlide(-1)">
+                          <svg class="small_indicator_svg" width="21" height="20">
+                            <use href="./images/icons.svg#icon-left-small"></use>
+                          </svg>
+                        </button>
+                        <button class="program_nav_button plus nav_button_plus" onclick="changeProgramPLus()">
+                          <svg class="small_indicator_svg" width="21" height="20">
+                            <use href="./images/icons.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                        <button class="program_nav_button next nav_button_small" onclick="changeProgramSlide(1)">
+                          <svg class="small_indicator_svg" width="21" height="20">
+                            <use href="./images/icons.svg#icon-right-small"></use>
+                          </svg>
+                        </button>
+                        <span class="program_indicator">8</span>
+                      </div>
                     </div>
-                    <div class="cases_slider-nav">
-                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
-                      <span class="cases_slide-indicator">4/12</span>
-                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    <div class="program_buttons">
+                      <button class="program_buttons_btn active" onclick="changeProgramText(2, 1)">Web
+                        Development</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(2, 2)">Digital Marketing</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(2, 3)">SaaS Products</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(2, 4)">Apps Development</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(2, 5)">SEO Services</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(2, 6)">Data Analysis</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="program_slide">
+              <div class="program_content_box">
+                <div class="program_content_right">
+                  <img class="program_right_img" src="./images/program/image_03@1x.jpg" alt="Web Development"
+                    srcset="./images/program/image_03@1x.jpg 1x, ./images/program/image_03@2x.jpg 2x">
+                </div>
+                <div class="program_content_left_bg">
+                  <div class="program_content_left">
+                    <div class="program_left_text_container" id="textProgramContainer3">
+                      <h4 class="program_text_heading h4" id="program_textHeading3">Web Development</h4>
+                      <p class="program_text_description" id="program_textDescription3">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
+                    </div>
+                    <div class="program_slider_nav_box">
+                      <p class="program_nav_box_text">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                      <div class="program_slider_nav">
+                        <span class="program_slide_indicator program_indicator">3</span>
+                        <button class="program_nav_button prev nav_button_small" onclick="changeProgramSlide(-1)">
+                          <svg class="small_indicator_svg" width="21" height="20">
+                            <use href="./images/icons.svg#icon-left-small"></use>
+                          </svg>
+                        </button>
+                        <button class="program_nav_button plus nav_button_plus" onclick="changeProgramPLus()">
+                          <svg class="small_indicator_svg" width="21" height="20">
+                            <use href="./images/icons.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                        <button class="program_nav_button next nav_button_small" onclick="changeProgramSlide(1)">
+                          <svg class="small_indicator_svg" width="21" height="20">
+                            <use href="./images/icons.svg#icon-right-small"></use>
+                          </svg>
+                        </button>
+                        <span class="program_indicator">8</span>
+                      </div>
+                    </div>
+                    <div class="program_buttons">
+                      <button class="program_buttons_btn active" onclick="changeProgramText(3, 1)">Web
+                        Development</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(3, 2)">Digital Marketing</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(3, 3)">SaaS Products</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(3, 4)">Apps Development</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(3, 5)">SEO Services</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(3, 6)">Data Analysis</button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="cases_slide">
-              <div class="cases_content_box">
-                <div class="cases_content_right">
-                  <img class="cases_right_img" src="./images/cases/img_05@1x.jpg" alt="Web Development"
-                    srcset="./images/cases/img_05@1x.jpg 1x, ./images/cases/img_05@2x.jpg 2x">
+            <div class="program_slide">
+              <div class="program_content_box">
+                <div class="program_content_right">
+                  <img class="program_right_img" src="./images/program/image_04@1x.jpg" alt="Web Development"
+                    srcset="./images/program/image_04@1x.jpg 1x, ./images/program/image_04@2x.jpg 2x">
                 </div>
-                <div class="cases_content_left_bg">
-                  <div class="cases_content_left">
-                    <div class="cases_left_text_container" id="textCasesContainer5">
-                      <h4 class="cases_text_heading h4" id="cases_textHeading5">Web Development</h4>
-                      <p class="cases_text_description" id="cases_textDescription5">Lorem ipsum dolor sit amet
+                <div class="program_content_left_bg">
+                  <div class="program_content_left">
+                    <div class="program_left_text_container" id="textProgramContainer4">
+                      <h4 class="program_text_heading h4" id="program_textHeading4">Web Development</h4>
+                      <p class="program_text_description" id="program_textDescription4">Lorem ipsum dolor sit amet
                         consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
                     </div>
-                    <div class="cases_buttons">
-                      <button class="cases_buttons_btn active" onclick="changeCasesText(5, 1)">Web
-                        Development</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(5, 2)">Digital Marketing</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(5, 3)">SaaS Products</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(5, 4)">Apps Development</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(5, 5)">SEO Services</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(5, 6)">Data Analysis</button>
+                    <div class="program_slider_nav_box">
+                      <p class="program_nav_box_text">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                      <div class="program_slider_nav">
+                        <span class="program_slide_indicator program_indicator">4</span>
+                        <button class="program_nav_button prev nav_button_small" onclick="changeProgramSlide(-1)">
+                          <svg class="small_indicator_svg" width="21" height="20">
+                            <use href="./images/icons.svg#icon-left-small"></use>
+                          </svg>
+                        </button>
+                        <button class="program_nav_button plus nav_button_plus" onclick="changeProgramPLus()">
+                          <svg class="small_indicator_svg" width="21" height="20">
+                            <use href="./images/icons.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                        <button class="program_nav_button next nav_button_small" onclick="changeProgramSlide(1)">
+                          <svg class="small_indicator_svg" width="21" height="20">
+                            <use href="./images/icons.svg#icon-right-small"></use>
+                          </svg>
+                        </button>
+                        <span class="program_indicator">8</span>
+                      </div>
                     </div>
-                    <div class="cases_slider-nav">
-                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
-                      <span class="cases_slide-indicator">5/12</span>
-                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    <div class="program_buttons">
+                      <button class="program_buttons_btn active" onclick="changeProgramText(4, 1)">Web
+                        Development</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(4, 2)">Digital Marketing</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(4, 3)">SaaS Products</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(4, 4)">Apps Development</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(4, 5)">SEO Services</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(4, 6)">Data Analysis</button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="cases_slide">
-              <div class="cases_content_box">
-                <div class="cases_content_right">
-                  <img class="cases_right_img" src="./images/cases/img_06@1x.jpg" alt="Web Development"
-                    srcset="./images/cases/img_06@1x.jpg 1x, ./images/cases/img_06@2x.jpg 2x">
+            <div class="program_slide">
+              <div class="program_content_box">
+                <div class="program_content_right">
+                  <img class="program_right_img" src="./images/program/image_05@1x.jpg" alt="Web Development"
+                    srcset="./images/program/image_05@1x.jpg 1x, ./images/program/image_05@2x.jpg 2x">
                 </div>
-                <div class="cases_content_left_bg">
-                  <div class="cases_content_left">
-                    <div class="cases_left_text_container" id="textCasesContainer6">
-                      <h4 class="cases_text_heading h4" id="cases_textHeading6">Web Development</h4>
-                      <p class="cases_text_description" id="cases_textDescription6">Lorem ipsum dolor sit amet
+                <div class="program_content_left_bg">
+                  <div class="program_content_left">
+                    <div class="program_left_text_container" id="textProgramContainer5">
+                      <h4 class="program_text_heading h4" id="program_textHeading5">Web Development</h4>
+                      <p class="program_text_description" id="program_textDescription5">Lorem ipsum dolor sit amet
                         consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
                     </div>
-                    <div class="cases_buttons">
-                      <button class="cases_buttons_btn active" onclick="changeCasesText(6, 1)">Web
-                        Development</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(6, 2)">Digital Marketing</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(6, 3)">SaaS Products</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(6, 4)">Apps Development</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(6, 5)">SEO Services</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(6, 6)">Data Analysis</button>
+                    <div class="program_slider_nav_box">
+                      <p class="program_nav_box_text">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                      <div class="program_slider_nav">
+                        <span class="program_slide_indicator program_indicator">5</span>
+                        <button class="program_nav_button prev nav_button_small" onclick="changeProgramSlide(-1)">
+                          <svg class="small_indicator_svg" width="21" height="20">
+                            <use href="./images/icons.svg#icon-left-small"></use>
+                          </svg>
+                        </button>
+                        <button class="program_nav_button plus nav_button_plus" onclick="changeProgramPLus()">
+                          <svg class="small_indicator_svg" width="21" height="20">
+                            <use href="./images/icons.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                        <button class="program_nav_button next nav_button_small" onclick="changeProgramSlide(1)">
+                          <svg class="small_indicator_svg" width="21" height="20">
+                            <use href="./images/icons.svg#icon-right-small"></use>
+                          </svg>
+                        </button>
+                        <span class="program_indicator">8</span>
+                      </div>
                     </div>
-                    <div class="cases_slider-nav">
-                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
-                      <span class="cases_slide-indicator">6/12</span>
-                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    <div class="program_buttons">
+                      <button class="program_buttons_btn active" onclick="changeProgramText(5, 1)">Web
+                        Development</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(5, 2)">Digital Marketing</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(5, 3)">SaaS Products</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(5, 4)">Apps Development</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(5, 5)">SEO Services</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(5, 6)">Data Analysis</button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="cases_slide">
-              <div class="cases_content_box">
-                <div class="cases_content_right">
-                  <img class="cases_right_img" src="./images/cases/img_07@1x.jpg" alt="Web Development"
-                    srcset="./images/cases/img_07@1x.jpg 1x, ./images/cases/img_07@2x.jpg 2x">
+            <div class="program_slide">
+              <div class="program_content_box">
+                <div class="program_content_right">
+                  <img class="program_right_img" src="./images/program/image_06@1x.jpg" alt="Web Development"
+                    srcset="./images/program/image_06@1x.jpg 1x, ./images/program/image_06@2x.jpg 2x">
                 </div>
-                <div class="cases_content_left_bg">
-                  <div class="cases_content_left">
-                    <div class="cases_left_text_container" id="textCasesContainer7">
-                      <h4 class="cases_text_heading h4" id="cases_textHeading7">Web Development</h4>
-                      <p class="cases_text_description" id="cases_textDescription7">Lorem ipsum dolor sit amet
+                <div class="program_content_left_bg">
+                  <div class="program_content_left">
+                    <div class="program_left_text_container" id="textProgramContainer6">
+                      <h4 class="program_text_heading h4" id="program_textHeading6">Web Development</h4>
+                      <p class="program_text_description" id="program_textDescription6">Lorem ipsum dolor sit amet
                         consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
                     </div>
-                    <div class="cases_buttons">
-                      <button class="cases_buttons_btn active" onclick="changeCasesText(7, 1)">Web
-                        Development</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(7, 2)">Digital Marketing</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(7, 3)">SaaS Products</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(7, 4)">Apps Development</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(7, 5)">SEO Services</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(7, 6)">Data Analysis</button>
+                    <div class="program_slider_nav_box">
+                      <p class="program_nav_box_text">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                      <div class="program_slider_nav">
+                        <span class="program_slide_indicator program_indicator">6</span>
+                        <button class="program_nav_button prev nav_button_small" onclick="changeProgramSlide(-1)">
+                          <svg class="small_indicator_svg" width="21" height="20">
+                            <use href="./images/icons.svg#icon-left-small"></use>
+                          </svg>
+                        </button>
+                        <button class="program_nav_button plus nav_button_plus" onclick="changeProgramPLus()">
+                          <svg class="small_indicator_svg" width="21" height="20">
+                            <use href="./images/icons.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                        <button class="program_nav_button next nav_button_small" onclick="changeProgramSlide(1)">
+                          <svg class="small_indicator_svg" width="21" height="20">
+                            <use href="./images/icons.svg#icon-right-small"></use>
+                          </svg>
+                        </button>
+                        <span class="program_indicator">8</span>
+                      </div>
                     </div>
-                    <div class="cases_slider-nav">
-                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
-                      <span class="cases_slide-indicator">7/12</span>
-                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    <div class="program_buttons">
+                      <button class="program_buttons_btn active" onclick="changeProgramText(6, 1)">Web
+                        Development</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(6, 2)">Digital Marketing</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(6, 3)">SaaS Products</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(6, 4)">Apps Development</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(6, 5)">SEO Services</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(6, 6)">Data Analysis</button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="cases_slide">
-              <div class="cases_content_box">
-                <div class="cases_content_right">
-                  <img class="cases_right_img" src="./images/cases/img_08@1x.jpg" alt="Web Development"
-                    srcset="./images/cases/img_08@1x.jpg 1x, ./images/cases/img_08@2x.jpg 2x">
+            <div class="program_slide">
+              <div class="program_content_box">
+                <div class="program_content_right">
+                  <img class="program_right_img" src="./images/program/image_07@1x.jpg" alt="Web Development"
+                    srcset="./images/program/image_07@1x.jpg 1x, ./images/program/image_07@2x.jpg 2x">
                 </div>
-                <div class="cases_content_left_bg">
-                  <div class="cases_content_left">
-                    <div class="cases_left_text_container" id="textCasesContainer8">
-                      <h4 class="cases_text_heading h4" id="cases_textHeading8">Web Development</h4>
-                      <p class="cases_text_description" id="cases_textDescription8">Lorem ipsum dolor sit amet
+                <div class="program_content_left_bg">
+                  <div class="program_content_left">
+                    <div class="program_left_text_container" id="textProgramContainer7">
+                      <h4 class="program_text_heading h4" id="program_textHeading7">Web Development</h4>
+                      <p class="program_text_description" id="program_textDescription7">Lorem ipsum dolor sit amet
                         consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
                     </div>
-                    <div class="cases_buttons">
-                      <button class="cases_buttons_btn active" onclick="changeCasesText(8, 1)">Web
-                        Development</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(8, 2)">Digital Marketing</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(8, 3)">SaaS Products</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(8, 4)">Apps Development</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(8, 5)">SEO Services</button>
-                      <button class="cases_buttons_btn" onclick="changeCasesText(8, 6)">Data Analysis</button>
+                    <div class="program_slider_nav_box">
+                      <p class="program_nav_box_text">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                      <div class="program_slider_nav">
+                        <span class="program_slide_indicator program_indicator">7</span>
+                        <button class="program_nav_button prev nav_button_small" onclick="changeProgramSlide(-1)">
+                          <svg class="small_indicator_svg" width="21" height="20">
+                            <use href="./images/icons.svg#icon-left-small"></use>
+                          </svg>
+                        </button>
+                        <button class="program_nav_button plus nav_button_plus" onclick="changeProgramPLus()">
+                          <svg class="small_indicator_svg" width="21" height="20">
+                            <use href="./images/icons.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                        <button class="program_nav_button next nav_button_small" onclick="changeProgramSlide(1)">
+                          <svg class="small_indicator_svg" width="21" height="20">
+                            <use href="./images/icons.svg#icon-right-small"></use>
+                          </svg>
+                        </button>
+                        <span class="program_indicator">8</span>
+                      </div>
                     </div>
-                    <div class="cases_slider-nav">
-                      <button class="cases_nav-button prev" onclick="changeCasesSlide(-1)">❮</button>
-                      <span class="cases_slide-indicator">8/12</span>
-                      <button class="cases_nav-button next" onclick="changeCasesSlide(1)">❯</button>
+                    <div class="program_buttons">
+                      <button class="program_buttons_btn active" onclick="changeProgramText(7, 1)">Web
+                        Development</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(7, 2)">Digital Marketing</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(7, 3)">SaaS Products</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(7, 4)">Apps Development</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(7, 5)">SEO Services</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(7, 6)">Data Analysis</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="program_slide">
+              <div class="program_content_box">
+                <div class="program_content_right">
+                  <img class="program_right_img" src="./images/program/image_08@1x.jpg" alt="Web Development"
+                    srcset="./images/program/image_08@1x.jpg 1x, ./images/program/image_08@2x.jpg 2x">
+                </div>
+                <div class="program_content_left_bg">
+                  <div class="program_content_left">
+                    <div class="program_left_text_container" id="textProgramContainer8">
+                      <h4 class="program_text_heading h4" id="program_textHeading8">Web Development</h4>
+                      <p class="program_text_description" id="program_textDescription8">Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Neque repellendus minima reiciendis nobis dolore obcaecati.</p>
+                    </div>
+                    <div class="program_slider_nav_box">
+                      <p class="program_nav_box_text">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                      <div class="program_slider_nav">
+                        <span class="program_slide_indicator program_indicator">8</span>
+                        <button class="program_nav_button prev nav_button_small" onclick="changeProgramSlide(-1)">
+                          <svg class="small_indicator_svg" width="21" height="20">
+                            <use href="./images/icons.svg#icon-left-small"></use>
+                          </svg>
+                        </button>
+                        <button class="program_nav_button plus nav_button_plus" onclick="changeProgramPLus()">
+                          <svg class="small_indicator_svg" width="21" height="20">
+                            <use href="./images/icons.svg#icon-plus"></use>
+                          </svg>
+                        </button>
+                        <button class="program_nav_button next nav_button_small" onclick="changeProgramSlide(1)">
+                          <svg class="small_indicator_svg" width="21" height="20">
+                            <use href="./images/icons.svg#icon-right-small"></use>
+                          </svg>
+                        </button>
+                        <span class="program_indicator">8</span>
+                      </div>
+                    </div>
+                    <div class="program_buttons">
+                      <button class="program_buttons_btn active" onclick="changeProgramText(8, 1)">Web
+                        Development</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(8, 2)">Digital Marketing</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(8, 3)">SaaS Products</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(8, 4)">Apps Development</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(8, 5)">SEO Services</button>
+                      <button class="program_buttons_btn" onclick="changeProgramText(8, 6)">Data Analysis</button>
                     </div>
                   </div>
                 </div>
@@ -1051,7 +1413,8 @@
 
     <section class="community_section section">
       <div class="community_container container">
-        <h2 class="community_h2 h2">Центр кар'єри</h2>
+        <h2 class="community_h2 h2">Експертна спільнота
+        </h2>
         <div class="community_slider-container">
 
           <div class="community_slide community_active" id="community_slide1">
@@ -1101,7 +1464,7 @@
 
     <section class="tuition_section section">
       <div class="tuition_container container">
-        <h2 class="tuition_h2 h2">Тарифи навчання</h2>
+        <h2 class="tuition_h2 h2" id="pages">Тарифи навчання</h2>
         <ul class="tuition_content">
           <li class="tuition_content_wrapper">
             <div class="tuition_box">
@@ -1324,17 +1687,23 @@
               </div>
             </li>
           </ul>
-          <div class="reviews_slider-nav">
-            <button class="reviews_carousel-button reviews_prev">&lt;</button>
-            <button class="reviews_carousel-button reviews_next">&gt;</button>
-          </div>
+          <button class="reviews_carousel-button reviews_prev">
+            <svg class="medium_indicator_svg" width="9" height="50">
+              <use href="./images/icons.svg#icon-left-big"></use>
+            </svg>
+          </button>
+          <button class="reviews_carousel-button reviews_next">
+            <svg class="medium_indicator_svg" width="9" height="50">
+              <use href="./images/icons.svg#icon-right-Big"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </section>
 
     <section class="contactUs_section section">
       <div class="contactUs_container container">
-        <h2 class="contactUs_h2 h2">Зв'язок з нами</h2>
+        <h2 class="contactUs_h2 h2" id="contactUs">Зв'язок з нами</h2>
         <div class="contactUs_content">
           <div class="contactUs_content_box">
             <div class="contactUs_content_right">
@@ -1366,9 +1735,12 @@
       </div>
     </section>
   </main>
+
   <footer class="footer">
     <div class="footer_container container">
-      <img class="footer_logo" src="./images/footer/Logo.png" alt="logo">
+      <a href="index.html">
+        <img class="footer_logo" src="./images/footer/Logo.png" alt="logo">
+      </a>
       <div class="footer_content">
         <p class="footer_content_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus facere
           modi possimus dignissimos, aliquam nobis
@@ -1378,16 +1750,18 @@
           <address class="footer_contacts_address">
             <ul class="footer_address_list">
               <li class="footer_address_item">
-                <svg class="footer_address_svg" fill="#ffffff" width="20" height="16">
-                  <use href="./images/icons.svg#icon-Email"></use>
-                </svg>
-                <a class="footer_adsress_link" href="mailto:example@support.com">example@support.com</a>
+                <a class="footer_adsress_link" href="mailto:example@support.com">
+                  <svg class="footer_address_svg" width="24" height="24">
+                    <use href="./images/icons.svg#icon-Email"></use>
+                  </svg>
+                  example@support.com</a>
               </li>
               <li class="footer_address_item">
-                <svg class="footer_address_svg" fill="#ffffff" width="20" height="16">
-                  <use href="./images/icons.svg#icon-Map"></use>
-                </svg>
-                <a class="footer_adsress_link" href="http://">5 xyz st., adc, vallhalla</a>
+                <a class="footer_adsress_link" href="http://">
+                  <svg class="footer_address_svg" width="24" height="24">
+                    <use href="./images/icons.svg#icon-Map"></use>
+                  </svg>
+                  5 xyz st., adc, vallhalla</a>
               </li>
             </ul>
           </address>
@@ -1411,19 +1785,7 @@
   <script src="./js/community/community.js"></script>
   <script src="./js/tuition/tuition.js"></script>
   <script src="./js/reviews/reviews.js"></script>
+  <script src="./js/program/program.js"></script>
 </body>
 
 </html>
-
-
-<!-- <section class="_section section">
-  <div class="_container container">
-    <h2 class="_h2 h2"></h2>
-    <div class="_content">
-      <div class="_content_box">
-        <div class="_content_right"></div>
-        <div class="_content_left"></div>
-      </div>
-    </div>
-  </div>
-</section> -->
